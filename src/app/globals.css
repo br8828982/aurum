@@ -1,0 +1,43 @@
+/* src/app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream: #faf8f5;
+  --gold: #c9a96e;
+  --gold-light: #e8d5b0;
+}
+
+@layer base {
+  body {
+    background-color: var(--cream);
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: var(--font-cormorant), Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .bg-cream { background-color: #faf8f5; }
+  .text-gold { color: #c9a96e; }
+  .border-gold { border-color: #c9a96e; }
+  .bg-gold { background-color: #c9a96e; }
+  
+  .font-serif { font-family: var(--font-cormorant), Georgia, serif; }
+  .font-sans { font-family: var(--font-dm-sans), system-ui, sans-serif; }
+
+  /* Scrollbar styling */
+  .scrollbar-thin::-webkit-scrollbar { width: 4px; }
+  .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { background: #e8d5b0; border-radius: 2px; }
+}
+
+/* Smooth transitions */
+* { transition-property: color, background-color, border-color, opacity, transform;
+    transition-duration: 150ms; transition-timing-function: ease; }
+
+/* Remove default form styles */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; }
